@@ -2,13 +2,12 @@
 # A partir disso..
 
 class Receita():
-    def __init__ (self, nome, ingredientes, preparo):
+    def __init__ (self, ingredientes, preparo):
         self.ingredientes = ingredientes
         self.modo_de_preparo = preparo
-        self.nome = nome
+
 
     def get_all(self): 
-        print("A receita é de {}". format(self.nome))
         print("Os ingredientes da receita são: ")
         for i in self.ingredientes:
             print(i)
@@ -19,8 +18,31 @@ class Receita():
         # print("Os ingredientes dessa receita são \n{}, \ne o modo de preparo é \n{}".format(
         # self.ingredientes,self.modo_de_preparo))
 
-macarronada = Receita("Macarronada",["1 - Macarrão", "2 - Óleo", "3 - Água", "4 - Sal", "5 - Molho de Tomate"],["1º Ferva a água", "2º Adicione sal à gosto", "3º Adicione o óleo e o macarrão", "4º Tire depois de 8min e adicione o molho"])
-macarronada.get_all()
+# ******* HERANÇA ********
+class Doces(Receita):
+    def __init__(self, nivel_acucar, ingredientes, preparo):
+        self.nivel = nivel_acucar
+        self.ingredientes = ingredientes
+        self.modo_de_preparo = preparo
+    
+class Salgados(Receita):
+    def __init__(self, nivel_sal, ingredientes, preparo):
+        self.nivel = nivel_sal
+        self.ingredientes = ingredientes
+        self.modo_de_preparo = preparo
+    
+mousse = Doces('Nível de acúçar: 8/10',['1- Leite Condensado', '2- Creme de leite', '3 - 1pct de gelatina','4 - Água'], ['1- Prepare a gelatina conforme a embalagem', '2- Adicione tudo ao liquidificador', '3- Bata tudo por 2min'])
+print(mousse.nivel)
+mousse.get_all()
+print()
+print()
+churrasco = Salgados('Nível de sal: 5/10',['1- Pão de Alho', '2- Carne', '3 - Linguiça','4 - Carvão'], ['1- Limpe as carne', '2- Ligue a churrasqueira ', '3- Coloque os ingredites restante e retire quando assados'])
+print(churrasco.nivel)
+churrasco.get_all()
+
+
+# macarronada = Receita(["1 - Macarrão", "2 - Óleo", "3 - Água", "4 - Sal", "5 - Molho de Tomate"],["1º Ferva a água", "2º Adicione sal à gosto", "3º Adicione o óleo e o macarrão", "4º Tire depois de 8min e adicione o molho"])
+# macarronada.get_all()
 
 
 

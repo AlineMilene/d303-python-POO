@@ -41,6 +41,8 @@
 
 # *********** EXEMPLO 2 - ANIMAL ************
 class Animal():
+    vida = True
+
     def __init__(self, pelo, especie, olhos, patas):
         self.pelo = pelo
         self.especie = especie
@@ -52,6 +54,19 @@ class Animal():
             self.especie, self.olhos, self.patas
         ))
     
-porco = Animal(True, "Suíno", 2, 4)
+class Cachorro(Animal):
+    def __init__ (self, raca, olhos, patas, nome):
+        self.raca = raca
+        self.olhos = olhos
+        self.patas = patas
+        self.nome = nome
+    
+    def get_vida(self):
+        print(self.vida)
 
+cleiton = Cachorro("Vira - Lata", 1, 3, "Cleiton")
+# cleiton.get_all()
+cleiton.get_vida()
+
+porco = Animal(True, "Suíno", 2, 4)
 porco.get_all()
