@@ -4,14 +4,12 @@
 
 Estes exercícios foram desenvolvidos durante a Academia de Desenvolvimento Web na Estação Hack do Facebook em Setembro de 2017.
 
-### Layout
-<img height="60%" width="60%" src=https://user-images.githubusercontent.com/54823221/122154148-b1b84280-ce3a-11eb-96c0-e497e012c015.png alt="Picture Home Desktop version">
-
-
 ## Tecnologias utilizadas
 
 ### Back end
 - Python
+<img height="30%" width="30%" src=https://user-images.githubusercontent.com/54823221/122154913-56874f80-ce3c-11eb-96e8-0df654b25cb2.png alt="Python Logo">
+
 
 ## Como executar o projeto
 
